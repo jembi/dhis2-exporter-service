@@ -14,11 +14,10 @@ jobs:
         uses: actions/checkout@v2
         
       -  name: Set up JDK version
-         uses: actions/setup-java@v3
+         uses: actions/setup-java@v2
          with:
-          website: docs.azul.com
-          release: 17
-          version: 17.0.3
+          java-version: 17.0.3
+          distribution: 'zulu'
           
       - name: Build the project with Maven
         run: mvn -B package --file pom.xml
