@@ -21,7 +21,7 @@ jobs:
           
       - name: Build the project with Maven
 #         run: mvn -B package --file pom.xml
-        run: mvn clean package
+        run: mvn clean package -e
         
       - name: List files
         run: ls -la
