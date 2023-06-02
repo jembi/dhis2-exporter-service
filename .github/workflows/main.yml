@@ -16,8 +16,9 @@ jobs:
       -  name: Set up JDK version
          uses: actions/setup-java@v3
          with:
-          distribution: 'zulu'
-          java-version: '17'
+          website: docs.azul.com
+          release: 17
+          version: 17.0.3
           
       - name: Build the project with Maven
         run: mvn -B package --file pom.xml
