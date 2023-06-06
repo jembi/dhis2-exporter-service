@@ -1,4 +1,4 @@
-package org.jembi.ciol.dhis2Exporter;
+package org.jembi.ciol.dispatch;
 
 import okhttp3.*;
 import org.apache.logging.log4j.LogManager;

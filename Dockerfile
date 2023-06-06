@@ -5,4 +5,4 @@ RUN apt-get update && apt-get install -y apt-utils && apt-get update && apt-get 
 
 ADD target/Dispatch-1.0-SNAPSHOT-spring-boot.jar Dispatch-1.0-SNAPSHOT-spring-boot.jar
 
-ENTRYPOINT ["java", "-jar", "Dispatch-1.0-SNAPSHOT-spring-boot.jar"]
+ENTRYPOINT ["java", "-server", "-Xms16M", "-Xmx256M", "-jar", "Dispatch-1.0-SNAPSHOT-spring-boot.jar"]
