@@ -56,8 +56,8 @@ public final class Main {
     }
 
     public static String getConfigDHIS2password() {
-        LOGGER.warn(NO_CONFIG_MESSAGE);
         if (restConfig == null) {
+            LOGGER.warn(NO_CONFIG_MESSAGE);
             throw new NullPointerException(NO_CONFIG_MESSAGE);
         }
         return Main.restConfig.dhis2Password();

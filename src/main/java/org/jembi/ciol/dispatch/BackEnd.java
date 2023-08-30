@@ -89,7 +89,7 @@ public class BackEnd extends AbstractBehavior<BackEnd.Event> {
                     stream = new FrontEnd();
                     stream.open(getContext().getSystem(), getContext().getSelf());
                     response.close();
-                    sendNotification("Connected", "dhis_server_up");
+                    // sendNotification("Connected", "dhis_server_up");
                     return stateConnected();
                 }
                 response.close();
@@ -160,7 +160,7 @@ public class BackEnd extends AbstractBehavior<BackEnd.Event> {
                 sendNotification("Error", String.format("dhis_server_error:%d", response.code()));
                 message.replyTo.tell(new EventSendtoDHISRSP(false));
             } else {
-                sendNotification("Dispatcher", String.format("dhis_server_sent:%s", jsonStr));
+                // sendNotification("Dispatcher", String.format("dhis_server_sent:%s", jsonStr));
                 message.replyTo.tell(new EventSendtoDHISRSP(true));
             }
             response.close();
